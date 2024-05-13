@@ -1,9 +1,9 @@
 package com.example.firstdemo.controller;
+import com.example.firstdemo.AuthResponse;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.service.AccountService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,8 +11,16 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api")
 public class AccountController {
+
     private final AccountService accountService;
 
+
+    @GetMapping("/home")
+    public String home() {
+        return "系統首頁";
+    }
+
+    //註冊
     @PostMapping("/account")
     public ResponseEntity<Account> createAccount(@RequestBody AccountDTO accountDTO) {
         return accountService.createAccount(accountDTO);
@@ -31,6 +39,13 @@ public class AccountController {
     @DeleteMapping("/account/{id}")
     public ResponseEntity<String> deleteAccount(@PathVariable Long id) {
         return accountService.deleteAccount(id);
+    }
+
+
+    //登入
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody AccountDTO accountDTO) {
+        return accountService.login(accountDTO);
     }
 
 

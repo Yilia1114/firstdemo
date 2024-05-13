@@ -1,5 +1,8 @@
 package com.example.firstdemo.service;
 
+import com.example.firstdemo.dao.Repository.AccountMapper;
+import com.example.firstdemo.AuthResponse;
+import com.example.firstdemo.JwtUtils;
 import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.Repository.AccountRepository;
@@ -15,6 +18,11 @@ public class AccountService {
     private AccountRepository accountRepository;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired
+    private  JwtUtils jwtUtils;
+    @Autowired
+    private  AccountMapper accountMapper;
+
 
     //註冊帳號
     public ResponseEntity<Account> createAccount(AccountDTO accountDTO) {
@@ -71,7 +79,19 @@ public class AccountService {
         }
     }
 
+    // 登入
+    //註冊帳號
+    public ResponseEntity<AuthResponse> login(AccountDTO accountDTO) {
+        Account account = accountMapper.findByConditions(accountDTO.getUser(),bCryptPasswordEncoder.encode(accountDTO.getPassword()));
+        if (account != null) {
+            String token = jwtUtils.generateToken(account.getUser());
+
+            return ResponseEntity.ok(new AuthResponse(token));
+        } else {
+            return ResponseEntity.notFound().build();
+        }
 
 
+    }
 
 }
