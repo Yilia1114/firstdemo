@@ -1,58 +1,62 @@
 package com.example.firstdemo.service;
 
-import com.example.firstdemo.dao.Repository.AccountMapper;
-import com.example.firstdemo.AuthResponse;
+import com.example.firstdemo.BusinessException;
+import com.example.firstdemo.SuccessResponse;
+import com.example.firstdemo.dao.MyBatis.AccountMapper;
 import com.example.firstdemo.JwtUtils;
 import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.controller.pojo.AccountDTO;
-import com.example.firstdemo.dao.Repository.AccountRepository;
+import com.example.firstdemo.dao.JPA.AccountRepository;
 import com.example.firstdemo.service.helper.AccountValidationHelper;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class AccountService {
-    @Autowired
-    private AccountRepository accountRepository;
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-    @Autowired
-    private  JwtUtils jwtUtils;
-    @Autowired
-    private  AccountMapper accountMapper;
+
+    private final AccountRepository accountRepository;
+
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    private final JwtUtils jwtUtils;
+
+    private final AccountMapper accountMapper;
 
 
     //註冊帳號
-    public ResponseEntity<Account> createAccount(AccountDTO accountDTO) {
+    public ResponseEntity<SuccessResponse> createAccount(AccountDTO accountDTO) {
 
-            //驗證帳號密碼
-            AccountValidationHelper.validateAccount(accountDTO, accountRepository);
-            //成功直接註冊
-            Account newAccount = new Account();
-            newAccount.setId(accountRepository.count()+1);
-            newAccount.setUser(accountDTO.getUser());
-            newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
-            accountRepository.save(newAccount);
+        //驗證帳號密碼
+        AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+        //成功直接註冊
+        Account newAccount = new Account();
+        newAccount.setId(accountRepository.count() + 1);
+        newAccount.setUser(accountDTO.getUser());
+        newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
+        accountRepository.save(newAccount);
 
-            return ResponseEntity.ok(newAccount);
+        return ResponseEntity.ok(SuccessResponse.successMessage("註冊成功"));
     }
 
 
     //取得特定ID的帳號
-    public  ResponseEntity<AccountDTO> getAccountById(Long id) {
+    public ResponseEntity<SuccessResponse> getAccountById(Long id) {
         Account account = accountRepository.findById(id).orElse(null);
+        //密碼不直接顯示回JSON
+        account.setPassword(null);
+
         if (account != null) {
-            AccountDTO accountDTO = AccountValidationHelper.convertToDTO(account);
-            return ResponseEntity.ok().body(accountDTO);
+            return ResponseEntity.ok(SuccessResponse.successWithData("註冊成功",account));
         } else {
-            return ResponseEntity.notFound().build();
+            throw new BusinessException("取得失敗");
         }
     }
 
     //更新特定ID的帳號密碼
-    public ResponseEntity<String> updateAccount(Long id, AccountDTO accountDTO) {
+    public ResponseEntity<SuccessResponse> updateAccount(Long id, AccountDTO accountDTO) {
         Account existingAccount = accountRepository.findById(id).orElse(null);
         if (existingAccount != null) {
             //驗證要修改的帳號密碼
@@ -62,36 +66,41 @@ public class AccountService {
             existingAccount.setUser(accountDTO.getUser());
             existingAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
             accountRepository.save(existingAccount);
-            return ResponseEntity.ok("Account updated successfully");
+            return ResponseEntity.ok(SuccessResponse.successMessage("更新成功"));
         } else {
-            return ResponseEntity.notFound().build();
+            throw new BusinessException("更新失敗");
         }
     }
 
     //刪除特定ID的帳號
-    public ResponseEntity<String> deleteAccount(Long id) {
+    public ResponseEntity<SuccessResponse> deleteAccount(Long id) {
         Account existingAccount = accountRepository.findById(id).orElse(null);
         if (existingAccount != null) {
             accountRepository.delete(existingAccount);
-            return ResponseEntity.ok("Account deleted successfully");
+            return ResponseEntity.ok(SuccessResponse.successMessage("刪除成功"));
         } else {
-            return ResponseEntity.notFound().build();
+            throw new BusinessException("刪除失敗");
         }
     }
 
     // 登入
     //註冊帳號
-    public ResponseEntity<AuthResponse> login(AccountDTO accountDTO) {
-        Account account = accountMapper.findByConditions(accountDTO.getUser(),bCryptPasswordEncoder.encode(accountDTO.getPassword()));
-        if (account != null) {
-            String token = jwtUtils.generateToken(account.getUser());
+    public ResponseEntity<SuccessResponse> login(AccountDTO accountDTO) {
 
-            return ResponseEntity.ok(new AuthResponse(token));
+        // 1. 從資料庫中根據用戶名查詢帳戶資訊，包括加密後的密碼。
+        Account account = accountMapper.findByUsername(accountDTO.getUser());
+
+        // 2. 使用 BCryptPasswordEncoder.matches() 方法來比較用戶輸入的密碼和資料庫中的加密密碼是否匹配。
+        if (account != null && bCryptPasswordEncoder.matches(accountDTO.getPassword(), account.getPassword())) {
+            // 密碼匹配，登入成功
+            // 將userid包到jwt 回傳Token
+                String token = jwtUtils.generateToken(account.getUser());
+                return ResponseEntity.ok(SuccessResponse.successToken(token));
+
         } else {
-            return ResponseEntity.notFound().build();
+            // 密碼不匹配，登入失敗
+            throw new BusinessException("登入失敗");
         }
 
-
     }
-
 }

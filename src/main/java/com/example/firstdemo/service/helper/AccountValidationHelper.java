@@ -3,7 +3,7 @@ package com.example.firstdemo.service.helper;
 import com.example.firstdemo.BusinessException;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.Account;
-import com.example.firstdemo.dao.Repository.AccountRepository;
+import com.example.firstdemo.dao.JPA.AccountRepository;
 import org.springframework.util.StringUtils;
 
 public class AccountValidationHelper {
