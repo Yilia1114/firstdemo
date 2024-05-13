@@ -1,17 +1,20 @@
 package com.example.firstdemo.controller;
 import com.example.firstdemo.controller.pojo.AccountDTO;
+import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.service.AccountService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api")
 public class AccountController {
-    private AccountService accountService;
+    private final AccountService accountService;
 
     @PostMapping("/account")
-    public ResponseEntity<String> createAccount(@RequestBody AccountDTO accountDTO) {
+    public ResponseEntity<Account> createAccount(@RequestBody AccountDTO accountDTO) {
         return accountService.createAccount(accountDTO);
     }
 

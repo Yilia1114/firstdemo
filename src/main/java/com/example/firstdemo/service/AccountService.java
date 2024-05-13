@@ -3,54 +3,56 @@ package com.example.firstdemo.service;
 import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.Repository.AccountRepository;
-import io.micrometer.common.util.StringUtils;
-import org.springframework.http.HttpStatus;
+import com.example.firstdemo.service.helper.AccountValidationHelper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AccountService {
-
+    @Autowired
     private AccountRepository accountRepository;
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public ResponseEntity<String> createAccount(AccountDTO accountDTO) {
-        // 檢查帳號密碼是否為空
-        if (StringUtils.isEmpty(accountDTO.getUser()) || StringUtils.isEmpty(accountDTO.getPassword())) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username or password cannot be empty");
-        }
+    //註冊帳號
+    public ResponseEntity<Account> createAccount(AccountDTO accountDTO) {
 
-        // 檢查帳號是否已存在
-        Account existingAccount = accountRepository.findByUser(accountDTO.getUser());
-        if (existingAccount != null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username already exists");
-        }
+            //驗證帳號密碼
+            AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+            //成功直接註冊
+            Account newAccount = new Account();
+            newAccount.setId(accountRepository.count()+1);
+            newAccount.setUser(accountDTO.getUser());
+            newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
+            accountRepository.save(newAccount);
 
-        Account newAccount = new Account();
-        newAccount.setUser(accountDTO.getUser());
-        newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
-        accountRepository.save(newAccount);
-
-        return ResponseEntity.status(HttpStatus.OK).body("User registered successfully");
+            return ResponseEntity.ok(newAccount);
     }
 
+
+    //取得特定ID的帳號
     public  ResponseEntity<AccountDTO> getAccountById(Long id) {
         Account account = accountRepository.findById(id).orElse(null);
         if (account != null) {
-            AccountDTO accountDTO = convertToDTO(account);
+            AccountDTO accountDTO = AccountValidationHelper.convertToDTO(account);
             return ResponseEntity.ok().body(accountDTO);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
+    //更新特定ID的帳號密碼
     public ResponseEntity<String> updateAccount(Long id, AccountDTO accountDTO) {
         Account existingAccount = accountRepository.findById(id).orElse(null);
         if (existingAccount != null) {
+            //驗證要修改的帳號密碼
+            AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+
             // 更新帳戶資訊
             existingAccount.setUser(accountDTO.getUser());
-            existingAccount.setPassword(accountDTO.getPassword());
+            existingAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
             accountRepository.save(existingAccount);
             return ResponseEntity.ok("Account updated successfully");
         } else {
@@ -58,6 +60,7 @@ public class AccountService {
         }
     }
 
+    //刪除特定ID的帳號
     public ResponseEntity<String> deleteAccount(Long id) {
         Account existingAccount = accountRepository.findById(id).orElse(null);
         if (existingAccount != null) {
@@ -68,14 +71,7 @@ public class AccountService {
         }
     }
 
-    // Helper 用於轉換 Account 物件為 AccountDTO 物件
-    private AccountDTO convertToDTO(Account account) {
-        AccountDTO accountDTO = new AccountDTO();
-        accountDTO.setId(account.getId());
-        accountDTO.setUser(account.getUser());
-        // 不返回密碼信息
-        return accountDTO;
-    }
+
 
 
 }
