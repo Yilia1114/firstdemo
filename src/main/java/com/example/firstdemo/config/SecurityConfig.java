@@ -39,7 +39,8 @@ public class SecurityConfig  {
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers(HttpMethod.POST, "/api/account").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/login").permitAll()
-                        .anyRequest().authenticated()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/api/test/**").permitAll()
+                                .anyRequest().authenticated()
                 )
                 .addFilterAt(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .csrf(csrf -> csrf.disable())
