@@ -1,4 +1,4 @@
-package com.example.firstdemo;
+package com.example.firstdemo.Exception;
 
 public class BusinessException extends RuntimeException {
     public BusinessException(String message) {

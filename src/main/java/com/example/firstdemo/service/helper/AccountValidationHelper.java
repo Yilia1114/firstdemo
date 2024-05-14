@@ -1,6 +1,6 @@
 package com.example.firstdemo.service.helper;
 
-import com.example.firstdemo.BusinessException;
+import com.example.firstdemo.Exception.BusinessException;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.dao.JPA.AccountRepository;

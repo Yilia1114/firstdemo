@@ -1,4 +1,4 @@
-package com.example.firstdemo;
+package com.example.firstdemo.util;
 
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;

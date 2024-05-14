@@ -1,4 +1,4 @@
-package com.example.firstdemo;
+package com.example.firstdemo.Exception;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

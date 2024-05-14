@@ -1,9 +1,9 @@
 package com.example.firstdemo.service;
 
-import com.example.firstdemo.BusinessException;
-import com.example.firstdemo.SuccessResponse;
+import com.example.firstdemo.Exception.BusinessException;
+import com.example.firstdemo.Exception.SuccessResponse;
 import com.example.firstdemo.dao.MyBatis.AccountMapper;
-import com.example.firstdemo.JwtUtils;
+import com.example.firstdemo.util.JwtUtils;
 import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.JPA.AccountRepository;
@@ -84,7 +84,6 @@ public class AccountService {
     }
 
     // 登入
-    //註冊帳號
     public ResponseEntity<SuccessResponse> login(AccountDTO accountDTO) {
 
         // 1. 從資料庫中根據用戶名查詢帳戶資訊，包括加密後的密碼。

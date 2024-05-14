@@ -1,5 +1,5 @@
 package com.example.firstdemo.controller;
-import com.example.firstdemo.SuccessResponse;
+import com.example.firstdemo.Exception.SuccessResponse;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.service.AccountService;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +29,7 @@ public class AccountController {
     public ResponseEntity<SuccessResponse> getAccountById(@PathVariable Long id) {
         return accountService.getAccountById(id);
     }
-
+    //修改帳號密碼
     @PutMapping("/account/{id}")
     public ResponseEntity<SuccessResponse> updateAccount(@PathVariable Long id, @RequestBody AccountDTO accountDTO) {
         return accountService.updateAccount(id, accountDTO);

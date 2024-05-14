@@ -1,4 +1,4 @@
-package com.example.firstdemo;
+package com.example.firstdemo.Exception;
 
 import lombok.Builder;
 import lombok.Data;

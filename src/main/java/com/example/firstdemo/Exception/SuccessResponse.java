@@ -1,4 +1,4 @@
-package com.example.firstdemo;
+package com.example.firstdemo.Exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;

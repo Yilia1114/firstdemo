@@ -74,6 +74,11 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 				<version>3.0.3</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version> <!-- 或者替换为最新版本 -->
+		</dependency>
 	</dependencies>
 
 	<build>
