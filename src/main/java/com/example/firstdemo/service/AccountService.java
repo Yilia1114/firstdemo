@@ -9,9 +9,11 @@ import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.JPA.AccountRepository;
 import com.example.firstdemo.service.helper.AccountValidationHelper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.MessageSource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import java.util.Locale;
 
 @Service
 @RequiredArgsConstructor
@@ -24,6 +26,8 @@ public class AccountService {
     private final JwtUtils jwtUtils;
 
     private final AccountMapper accountMapper;
+
+    private final MessageSource messageSource;
 
 
     //註冊帳號
@@ -84,7 +88,7 @@ public class AccountService {
     }
 
     // 登入
-    public ResponseEntity<SuccessResponse> login(AccountDTO accountDTO) {
+    public ResponseEntity<SuccessResponse> login(AccountDTO accountDTO,Locale locale) {
 
         // 1. 從資料庫中根據用戶名查詢帳戶資訊，包括加密後的密碼。
         Account account = accountMapper.findByUsername(accountDTO.getUser());
@@ -98,7 +102,8 @@ public class AccountService {
 
         } else {
             // 密碼不匹配，登入失敗
-            throw new BusinessException("登入失敗");
+            String errorMessage = messageSource.getMessage("error.login", null, locale);
+            throw new BusinessException(errorMessage);
         }
 
     }

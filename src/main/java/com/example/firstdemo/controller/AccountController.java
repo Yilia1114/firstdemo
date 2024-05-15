@@ -3,8 +3,11 @@ import com.example.firstdemo.Exception.SuccessResponse;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.service.AccountService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Locale;
 
 @RequiredArgsConstructor
 @RestController
@@ -43,8 +46,9 @@ public class AccountController {
 
     //登入
     @PostMapping("/login")
-    public ResponseEntity<SuccessResponse> login(@RequestBody AccountDTO accountDTO) {
-        return accountService.login(accountDTO);
+    public ResponseEntity<SuccessResponse> login(@RequestBody AccountDTO accountDTO ) {
+        Locale locale = LocaleContextHolder.getLocale();
+        return accountService.login(accountDTO,locale);
     }
 
 
