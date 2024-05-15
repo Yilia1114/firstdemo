@@ -2,10 +2,13 @@ package com.example.firstdemo.controller;
 import com.example.firstdemo.Exception.SuccessResponse;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.service.AccountService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.LocaleResolver;
 
 import java.util.Locale;
 
@@ -15,6 +18,8 @@ import java.util.Locale;
 public class AccountController {
 
     private final AccountService accountService;
+
+    private final LocaleResolver localeResolver;
 
 
     @GetMapping("/home")
@@ -44,11 +49,15 @@ public class AccountController {
     }
 
 
-    //登入
     @PostMapping("/login")
-    public ResponseEntity<SuccessResponse> login(@RequestBody AccountDTO accountDTO ) {
+    public ResponseEntity<SuccessResponse> login(@RequestBody AccountDTO accountDTO,
+                                                 @RequestParam(value = "lang", required = false) String lang, HttpServletRequest request,
+                                                 HttpServletResponse response ) {
+        if (lang != null) {
+            localeResolver.setLocale(request, response, new Locale(lang)); // 設定新的語言
+        }
         Locale locale = LocaleContextHolder.getLocale();
-        return accountService.login(accountDTO,locale);
+        return accountService.login(accountDTO, locale);
     }
 
 
