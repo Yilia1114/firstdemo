@@ -1,20 +1,13 @@
 package com.example.firstdemo.util;
 
-import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.dao.MyBatis.AccountMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -35,21 +28,24 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-
-
         String token = extractToken(request);
 
-        if (token != null && jwtUtils.validateToken(token)) {
-            String username = jwtUtils.extractUsername(token);
-            // 在这里可以根据用户名加载用户信息，并设置 Spring Security 上下文
-            UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-                    username,
-                    null,
-                    null
-            );
-            SecurityContextHolder.getContext().setAuthentication(authToken);
+        if (token != null) {
+            if (jwtUtils.validateToken(token)) {
+                String username = jwtUtils.extractUsername(token);
+                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
+                        username,
+                        null,
+                        null
+                );
+                SecurityContextHolder.getContext().setAuthentication(authToken);
+            } else {
+                // 如果令牌无效，设置响应状态码为401，并显示错误消息
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                response.getWriter().write("Token is invalid");
+                return;
+            }
         }
-
         filterChain.doFilter(request, response);
     }
 

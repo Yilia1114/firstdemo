@@ -1,7 +1,6 @@
 package com.example.firstdemo.util;
 
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;
@@ -13,7 +12,7 @@ import java.util.Date;
 @Component
 public class JwtUtils {
     private static final String SECRET = "Yilia1114HappyUsedJwtToOpenDoors";
-    private static final long EXPIRATION_TIME = 864_000_000; // 有效期為10天（以毫秒為單位）
+    private static final long EXPIRATION_TIME = 60_000;// 有效期為10天（以毫秒為單位）
 
     //產出
     public static String generateToken(String username) {
