@@ -35,21 +35,4 @@ public class WebMvcConfiguration implements WebMvcConfigurer{
         resolver.setDefaultLocale(Locale.TAIWAN); // 设置默认语言
         return resolver;
     }
-
-    /**
-     * 默認攔截器 其中lang表示切換語言的參數名
-     */
-    @Bean
-    public LocaleChangeInterceptor localeChangeInterceptor() {
-        LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
-        lci.setParamName("lang");
-        return lci;
-    }
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(localeChangeInterceptor());
-    }
-
-
 }
