@@ -43,7 +43,7 @@ public class AccountService {
         //成功直接註冊
         Account newAccount = new Account();
         newAccount.setId(accountRepository.count() + 1);
-        newAccount.setUser(accountDTO.getUser());
+        newAccount.setUsername(accountDTO.getUsername());
         newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
         accountRepository.save(newAccount);
 
@@ -77,7 +77,7 @@ public class AccountService {
             }
 
             // 更新帳戶資訊
-            existingAccount.setUser(accountDTO.getUser());
+            existingAccount.setUsername(accountDTO.getUsername());
             existingAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
             accountRepository.save(existingAccount);
             return ResponseEntity.ok(SuccessResponse.successMessage("更新成功"));
@@ -101,13 +101,13 @@ public class AccountService {
     public ResponseEntity<SuccessResponse> login(AccountDTO accountDTO,Locale locale) {
 
         // 1. 從資料庫中根據用戶名查詢帳戶資訊，包括加密後的密碼。
-        Account account = accountMapper.findByUsername(accountDTO.getUser());
+        Account account = accountMapper.findByUsername(accountDTO.getUsername());
 
         // 2. 使用 BCryptPasswordEncoder.matches() 方法來比較用戶輸入的密碼和資料庫中的加密密碼是否匹配。
         if (account != null && bCryptPasswordEncoder.matches(accountDTO.getPassword(), account.getPassword())) {
             // 密碼匹配，登入成功
             // 將userid包到jwt 回傳Token
-                String token = jwtUtils.generateToken(account.getUser());
+                String token = jwtUtils.generateToken(account.getUsername());
                 return ResponseEntity.ok(SuccessResponse.successToken(token));
 
         } else {

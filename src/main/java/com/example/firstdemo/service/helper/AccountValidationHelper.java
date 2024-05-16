@@ -20,7 +20,7 @@ public class AccountValidationHelper {
             return "error.register.DuplicateAccount";
         }
 
-        if (!isValidUsernameFormat(accountDTO.getUser())) {
+        if (!isValidUsernameFormat(accountDTO.getUsername())) {
             return "error.register.AccountCase";
         }
 
@@ -33,12 +33,12 @@ public class AccountValidationHelper {
     public static AccountDTO convertToDTO(Account account) {
         AccountDTO accountDTO = new AccountDTO();
         accountDTO.setId(account.getId());
-        accountDTO.setUser(account.getUser());
+        accountDTO.setUsername(account.getUsername());
         return accountDTO;
     }
 
     private static boolean isInvalidAccount(AccountDTO accountDTO) {
-        return StringUtils.isEmpty(accountDTO.getUser()) || StringUtils.isEmpty(accountDTO.getPassword());
+        return StringUtils.isEmpty(accountDTO.getUsername()) || StringUtils.isEmpty(accountDTO.getPassword());
     }
 
     private static boolean isValidUsernameFormat(String username) {
@@ -50,7 +50,7 @@ public class AccountValidationHelper {
     }
 
     private static boolean isDuplicateAccount(AccountDTO accountDTO, AccountRepository accountRepository) {
-        Account existingAccount = accountRepository.findByUser(accountDTO.getUser());
+        Account existingAccount = accountRepository.findByUsername(accountDTO.getUsername());
         return existingAccount != null;
     }
 }
