@@ -11,23 +11,23 @@ public class AccountValidationHelper {
     private static final String USERNAME_PATTERN = "^[a-zA-Z0-9]+$";
     private static final String PASSWORD_PATTERN = "^(?=.*[A-Z])[a-zA-Z0-9]+$";
 
-    public static void validateAccount(AccountDTO accountDTO, AccountRepository accountRepository) {
+    public static String  validateAccount(AccountDTO accountDTO, AccountRepository accountRepository) {
         if (isInvalidAccount(accountDTO)) {
-
-            throw new BusinessException("帳號或密碼不能為空");
+            return "error.register.empty";
         }
 
         if (isDuplicateAccount(accountDTO, accountRepository)) {
-            throw new BusinessException("帳號已存在");
+            return "error.register.DuplicateAccount";
         }
 
         if (!isValidUsernameFormat(accountDTO.getUser())) {
-            throw new BusinessException("帳號必須包含至少一個大寫字母，並且只能是字母和數字的組合");
+            return "error.register.AccountCase";
         }
 
         if (!isValidPasswordFormat(accountDTO.getPassword())) {
-            throw new BusinessException("密碼必須包含至少一個大寫字母，並且只能是字母和數字的組合");
+            return "error.register.PasswordCase";
         }
+        return  null;
     }
 
     public static AccountDTO convertToDTO(Account account) {

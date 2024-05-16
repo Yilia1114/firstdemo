@@ -31,10 +31,15 @@ public class AccountService {
 
 
     //註冊帳號
-    public ResponseEntity<SuccessResponse> createAccount(AccountDTO accountDTO) {
+    public ResponseEntity<SuccessResponse> createAccount(AccountDTO accountDTO,Locale locale) {
 
         //驗證帳號密碼
-        AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+        String Code =  AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+        if(Code != null){
+            String errorMessage = messageSource.getMessage(Code, null, locale);
+            throw new BusinessException(errorMessage);
+        }
+
         //成功直接註冊
         Account newAccount = new Account();
         newAccount.setId(accountRepository.count() + 1);
@@ -60,11 +65,16 @@ public class AccountService {
     }
 
     //更新特定ID的帳號密碼
-    public ResponseEntity<SuccessResponse> updateAccount(Long id, AccountDTO accountDTO) {
+    public ResponseEntity<SuccessResponse> updateAccount(Long id, AccountDTO accountDTO,Locale locale) {
         Account existingAccount = accountRepository.findById(id).orElse(null);
+
         if (existingAccount != null) {
             //驗證要修改的帳號密碼
-            AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+            String Code = AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+            if(Code != null){
+                String errorMessage = messageSource.getMessage(Code, null, locale);
+                throw new BusinessException(errorMessage);
+            }
 
             // 更新帳戶資訊
             existingAccount.setUser(accountDTO.getUser());

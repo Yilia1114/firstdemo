@@ -29,8 +29,8 @@ public class AccountController {
 
     //註冊
     @PostMapping("/account")
-    public ResponseEntity<SuccessResponse> createAccount(@RequestBody AccountDTO accountDTO) {
-        return accountService.createAccount(accountDTO);
+    public ResponseEntity<SuccessResponse> createAccount(@RequestBody AccountDTO accountDTO,@RequestHeader(value = "Accept-Language", required = false) Locale locale) {
+        return accountService.createAccount(accountDTO, locale);
     }
 
     @GetMapping("/account/{id}")
@@ -39,8 +39,8 @@ public class AccountController {
     }
     //修改帳號密碼
     @PutMapping("/account/{id}")
-    public ResponseEntity<SuccessResponse> updateAccount(@PathVariable Long id, @RequestBody AccountDTO accountDTO) {
-        return accountService.updateAccount(id, accountDTO);
+    public ResponseEntity<SuccessResponse> updateAccount(@PathVariable Long id, @RequestBody AccountDTO accountDTO,@RequestHeader(value = "Accept-Language", required = false) Locale locale) {
+        return accountService.updateAccount(id, accountDTO,locale);
     }
 
     @DeleteMapping("/account/{id}")
@@ -48,15 +48,9 @@ public class AccountController {
         return accountService.deleteAccount(id);
     }
 
-
     @PostMapping("/login")
     public ResponseEntity<SuccessResponse> login(@RequestBody AccountDTO accountDTO,
-                                                 @RequestParam(value = "lang", required = false) String lang, HttpServletRequest request,
-                                                 HttpServletResponse response ) {
-        if (lang != null) {
-            localeResolver.setLocale(request, response, new Locale(lang)); // 設定新的語言
-        }
-        Locale locale = LocaleContextHolder.getLocale();
+                                                 @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
         return accountService.login(accountDTO, locale);
     }
 
