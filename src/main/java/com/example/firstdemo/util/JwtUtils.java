@@ -12,7 +12,7 @@ import java.util.Date;
 @Component
 public class JwtUtils {
     private static final String SECRET = "Yilia1114HappyUsedJwtToOpenDoors";
-    private static final long EXPIRATION_TIME = 60_000;// 有效期為10天（以毫秒為單位）
+    private static final long EXPIRATION_TIME = 432_000_000;// 有效期為5天（以毫秒為單位）
 
     //產出
     public static String generateToken(String username) {
@@ -39,7 +39,7 @@ public class JwtUtils {
     public String extractUsername(String token) {
         Key secretKey = Keys.hmacShaKeyFor(SECRET.getBytes());
         Claims claims = Jwts.parserBuilder().setSigningKey(secretKey).build().parseClaimsJws(token).getBody();
-        return claims.getSubject();
+        return claims.get("username", String.class);
     }
 
 

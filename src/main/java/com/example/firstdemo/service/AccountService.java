@@ -2,6 +2,7 @@ package com.example.firstdemo.service;
 
 import com.example.firstdemo.Exception.BusinessException;
 import com.example.firstdemo.Exception.SuccessResponse;
+import com.example.firstdemo.controller.AccountController;
 import com.example.firstdemo.dao.MyBatis.AccountMapper;
 import com.example.firstdemo.util.JwtUtils;
 import com.example.firstdemo.dao.Account;
@@ -9,6 +10,7 @@ import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.JPA.AccountRepository;
 import com.example.firstdemo.service.helper.AccountValidationHelper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -17,6 +19,7 @@ import java.util.Locale;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class AccountService {
 
     private final AccountRepository accountRepository;
@@ -46,7 +49,7 @@ public class AccountService {
         newAccount.setUsername(accountDTO.getUsername());
         newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
         accountRepository.save(newAccount);
-
+        log.info("註冊完畢");
         return ResponseEntity.ok(SuccessResponse.successMessage("註冊成功"));
     }
 
