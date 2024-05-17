@@ -21,15 +21,15 @@ public class UserClockTimeSchedule {
     private final UserClockTimeTask userClockTimeTasks;
     private static final Logger logger = LoggerFactory.getLogger(UserClockTimeSchedule.class);
 
-    @Scheduled(fixedRate = 1800000)
+    @Scheduled(fixedRate = 1800000) //用於測試
     //@Scheduled(cron = "0 0 0 * * ?") // 每天晚上凌晨12點執行一次
-    public void calculateUserClockTime() {
-        logger.info("排程:計算打卡時間差 : 開始執行");
+    public void calculateUserClockTime()  {
         List<String> users = timeClockRepository.findDistinctUsernames();
         for (String user : users) {
             userClockTimeTasks.processUserClockTime(user);
+            userClockTimeTasks.processUserClockCount(user);
         }
-        logger.info("排程:計算打卡時間差 : 結束");
+
     }
 
 }

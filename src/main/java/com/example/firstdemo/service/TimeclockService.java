@@ -30,7 +30,6 @@ public class TimeclockService {
 
         if (account!=null){
             TimeClock newtimeclock = new TimeClock();
-            newtimeclock.setTime_clock_id(timeClockRepository.count()+1);
             newtimeclock.setUsername(account.getUsername());
             newtimeclock.setUser_clock_time(Timestamp.valueOf(LocalDateTime.now()));
             timeClockRepository.save(newtimeclock);

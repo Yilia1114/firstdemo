@@ -853,3 +853,743 @@ This generated password is for development use only. Your security configuration
 2024-05-17 13:52:40 === [scheduling-1] === INFO  === c.e.f.service.helper.AccountValidationHelper ==== 排程:計算打卡時間差 會員:Yilia213}
 2024-05-17 13:52:41 === [scheduling-1] === INFO  === c.e.f.service.helper.AccountValidationHelper ==== 排程:計算打卡時間差 會員:Yilia3335}
 2024-05-17 13:52:41 === [scheduling-1] === INFO  === c.e.f.service.helper.AccountValidationHelper ==== 排程:計算打卡時間差 : 結束
+2024-05-17 14:22:31 === [scheduling-1] === INFO  === c.e.f.service.helper.AccountValidationHelper ==== 排程:計算打卡時間差 : 開始執行
+2024-05-17 14:22:31 === [scheduling-1] === INFO  === c.e.f.service.helper.AccountValidationHelper ==== 排程:計算打卡時間差 會員:Yilia213}
+2024-05-17 14:22:31 === [scheduling-1] === INFO  === c.e.f.service.helper.AccountValidationHelper ==== 排程:計算打卡時間差 會員:Yilia3335}
+2024-05-17 14:22:31 === [scheduling-1] === INFO  === c.e.f.service.helper.AccountValidationHelper ==== 排程:計算打卡時間差 : 結束
+2024-05-17 14:25:55 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 14:25:55 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 14:25:55 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 14:25:58 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 3548 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 14:25:58 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 14:25:58 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 14:25:58 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2024-05-17 14:25:59 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 14:25:59 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 14:25:59 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 14:25:59 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 14:25:59 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1683 ms
+2024-05-17 14:26:00 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 14:26:00 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15369d73
+2024-05-17 14:26:00 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 14:26:00 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 14:26:00 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 14:26:00 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 14:26:01 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 14:26:01 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 14:26:01 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 14:26:01 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 14:26:02 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 14:26:02 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 14:26:02 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: 253fdf53-298f-4498-8cf0-068984350064
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 14:26:03 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54d116d5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7057d9f4, org.springframework.security.web.context.SecurityContextHolderFilter@685e5967, org.springframework.security.web.header.HeaderWriterFilter@59b43e35, org.springframework.web.filter.CorsFilter@37c49a55, org.springframework.security.web.authentication.logout.LogoutFilter@5fdcc63f, com.example.firstdemo.util.JwtAuthenticationFilter@ee8e7ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d3c14c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@599fab92, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13e6ab86, org.springframework.security.web.access.ExceptionTranslationFilter@40477d52, org.springframework.security.web.access.intercept.AuthorizationFilter@6418075c]
+2024-05-17 14:26:03 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 14:26:03 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.816 seconds (process running for 6.246)
+2024-05-17 14:26:03 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 排程:計算打卡時間差 : 開始執行
+2024-05-17 14:26:03 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia213
+2024-05-17 14:26:03 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia213
+2024-05-17 14:26:03 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3335
+2024-05-17 14:26:03 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia3335
+2024-05-17 14:26:03 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 排程:計算打卡時間差 : 結束
+2024-05-17 14:27:24 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 14:27:24 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 14:27:24 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 14:27:27 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 15240 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 14:27:27 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 14:27:28 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 14:27:28 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2024-05-17 14:27:29 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 14:27:29 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 14:27:29 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 14:27:29 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 14:27:29 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1699 ms
+2024-05-17 14:27:29 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 14:27:30 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4662752a
+2024-05-17 14:27:30 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 14:27:30 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 14:27:30 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 14:27:30 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 14:27:30 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 14:27:30 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 14:27:31 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 14:27:31 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 14:27:31 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 14:27:32 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 14:27:32 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: c52f5355-25e2-46a5-9371-ed4abefd53ec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 14:27:32 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18b88f7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@128ebca1, org.springframework.security.web.context.SecurityContextHolderFilter@4fc1eee5, org.springframework.security.web.header.HeaderWriterFilter@3d3c14c3, org.springframework.web.filter.CorsFilter@34128fed, org.springframework.security.web.authentication.logout.LogoutFilter@671c71e8, com.example.firstdemo.util.JwtAuthenticationFilter@62b09715, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36618b3b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7715d43c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10efb806, org.springframework.security.web.access.ExceptionTranslationFilter@685e5967, org.springframework.security.web.access.intercept.AuthorizationFilter@37c49a55]
+2024-05-17 14:27:33 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 14:27:33 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.73 seconds (process running for 6.156)
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 排程:計算打卡時間差 : 開始執行
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia213
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia213
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3335
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia3335
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:7
+2024-05-17 14:27:33 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 排程:計算打卡時間差 : 結束
+2024-05-17 14:33:08 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 14:33:08 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 14:33:08 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 14:34:35 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 21768 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 14:34:35 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 14:34:36 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 14:34:36 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2024-05-17 14:34:37 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 14:34:37 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 14:34:37 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 14:34:37 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 14:34:37 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1665 ms
+2024-05-17 14:34:37 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 14:34:38 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15369d73
+2024-05-17 14:34:38 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 14:34:38 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 14:34:38 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 14:34:38 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 14:34:38 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 14:34:38 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 14:34:39 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 14:34:39 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 14:34:39 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 14:34:39 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 14:34:39 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: 8ecb6840-ff91-4211-8464-83867a526bf7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 14:34:40 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54d116d5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7057d9f4, org.springframework.security.web.context.SecurityContextHolderFilter@685e5967, org.springframework.security.web.header.HeaderWriterFilter@59b43e35, org.springframework.web.filter.CorsFilter@37c49a55, org.springframework.security.web.authentication.logout.LogoutFilter@5fdcc63f, com.example.firstdemo.util.JwtAuthenticationFilter@ee8e7ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d3c14c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@599fab92, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13e6ab86, org.springframework.security.web.access.ExceptionTranslationFilter@40477d52, org.springframework.security.web.access.intercept.AuthorizationFilter@6418075c]
+2024-05-17 14:34:40 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 14:34:40 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.51 seconds (process running for 5.942)
+2024-05-17 14:34:40 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 排程:計算打卡時間差 : 開始執行
+2024-05-17 14:34:41 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia213
+2024-05-17 14:34:49 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢 耗時：8205毫秒
+2024-05-17 14:34:49 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia213
+2024-05-17 14:34:58 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2耗時：9229毫秒
+2024-05-17 14:34:58 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3335
+2024-05-17 14:35:00 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢 耗時：1521毫秒
+2024-05-17 14:35:00 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia3335
+2024-05-17 14:35:10 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:7耗時：9960毫秒
+2024-05-17 14:35:10 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 排程:計算打卡時間差 : 結束
+2024-05-17 14:38:18 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 14:38:18 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 14:38:18 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 14:38:21 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 22612 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 14:38:21 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 14:38:22 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 14:38:22 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2024-05-17 14:38:22 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 14:38:22 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 14:38:22 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 14:38:22 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 14:38:22 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1686 ms
+2024-05-17 14:38:23 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 14:38:23 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28daf506
+2024-05-17 14:38:23 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 14:38:23 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 14:38:23 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 14:38:23 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 14:38:24 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 14:38:24 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 14:38:25 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 14:38:25 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 14:38:25 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 14:38:25 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 14:38:25 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: b87743c1-6f84-49c3-9827-223067ecb62e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 14:38:26 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f5d7091, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18b88f7, org.springframework.security.web.context.SecurityContextHolderFilter@439054a7, org.springframework.security.web.header.HeaderWriterFilter@106387cf, org.springframework.web.filter.CorsFilter@128ebca1, org.springframework.security.web.authentication.logout.LogoutFilter@70a8654, com.example.firstdemo.util.JwtAuthenticationFilter@16134476, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@120661d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36618b3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34128fed, org.springframework.security.web.access.ExceptionTranslationFilter@1d7f2719, org.springframework.security.web.access.intercept.AuthorizationFilter@7057d9f4]
+2024-05-17 14:38:26 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 14:38:26 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.997 seconds (process running for 6.446)
+2024-05-17 14:38:26 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務一:開始
+2024-05-17 14:38:29 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務一:完成 耗時：1895毫秒
+2024-05-17 14:38:29 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務二:開始
+2024-05-17 14:38:39 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務二完成 耗時：9974毫秒
+2024-05-17 14:38:39 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務一:開始
+2024-05-17 14:38:45 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務一:完成 耗時：6656毫秒
+2024-05-17 14:38:45 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務二:開始
+2024-05-17 14:38:55 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務二完成 耗時：9581毫秒
+2024-05-17 15:08:26 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務一:開始
+2024-05-17 15:08:30 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務一:完成 耗時：3176毫秒
+2024-05-17 15:08:30 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務二:開始
+2024-05-17 15:08:30 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務二完成 耗時：708毫秒
+2024-05-17 15:08:30 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務一:開始
+2024-05-17 15:08:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務一:完成 耗時：2509毫秒
+2024-05-17 15:08:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務二:開始
+2024-05-17 15:08:35 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 任務二完成 耗時：2696毫秒
+2024-05-17 15:15:24 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:15:24 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 15:15:24 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 15:15:27 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 13900 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 15:15:27 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 15:15:28 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 15:15:28 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2024-05-17 15:15:29 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 15:15:29 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 15:15:29 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 15:15:29 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 15:15:29 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1713 ms
+2024-05-17 15:15:29 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 15:15:29 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28daf506
+2024-05-17 15:15:29 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 15:15:30 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 15:15:30 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 15:15:30 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 15:15:30 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 15:15:30 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 15:15:31 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 15:15:31 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:15:31 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 15:15:31 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 15:15:32 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: 138a8f7b-6a38-42ac-824a-bde9ac9528de
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 15:15:32 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f5d7091, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18b88f7, org.springframework.security.web.context.SecurityContextHolderFilter@439054a7, org.springframework.security.web.header.HeaderWriterFilter@106387cf, org.springframework.web.filter.CorsFilter@128ebca1, org.springframework.security.web.authentication.logout.LogoutFilter@70a8654, com.example.firstdemo.util.JwtAuthenticationFilter@16134476, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@120661d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36618b3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34128fed, org.springframework.security.web.access.ExceptionTranslationFilter@1d7f2719, org.springframework.security.web.access.intercept.AuthorizationFilter@7057d9f4]
+2024-05-17 15:15:33 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 15:15:33 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.85 seconds (process running for 6.275)
+2024-05-17 15:15:45 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia213
+2024-05-17 15:15:45 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia213
+2024-05-17 15:15:45 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia3335
+2024-05-17 15:15:45 === [ForkJoinPool.commonPool-worker-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3335
+2024-05-17 15:16:00 === [ForkJoinPool.commonPool-worker-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:16:00 === [ForkJoinPool.commonPool-worker-2] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 打卡時間計算完成，用戶: Yilia3335
+2024-05-17 15:16:00 === [ForkJoinPool.commonPool-worker-1] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:16:00 === [ForkJoinPool.commonPool-worker-1] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '23' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:17:02 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:17:02 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 15:17:02 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 15:17:04 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 11556 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 15:17:04 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 15:17:05 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 15:17:05 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2024-05-17 15:17:06 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 15:17:06 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 15:17:06 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 15:17:06 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 15:17:06 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1633 ms
+2024-05-17 15:17:06 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 15:17:06 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28daf506
+2024-05-17 15:17:06 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 15:17:06 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 15:17:06 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 15:17:07 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 15:17:07 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 15:17:07 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 15:17:08 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 15:17:08 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:17:08 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 15:17:08 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 15:17:08 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: 6382f46d-a41c-4c29-b861-ed1c16926b34
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 15:17:09 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f5d7091, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18b88f7, org.springframework.security.web.context.SecurityContextHolderFilter@439054a7, org.springframework.security.web.header.HeaderWriterFilter@106387cf, org.springframework.web.filter.CorsFilter@128ebca1, org.springframework.security.web.authentication.logout.LogoutFilter@70a8654, com.example.firstdemo.util.JwtAuthenticationFilter@16134476, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@120661d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36618b3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34128fed, org.springframework.security.web.access.ExceptionTranslationFilter@1d7f2719, org.springframework.security.web.access.intercept.AuthorizationFilter@7057d9f4]
+2024-05-17 15:17:10 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 15:17:10 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 6.003 seconds (process running for 6.463)
+2024-05-17 15:17:14 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia213
+2024-05-17 15:17:14 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia213
+2024-05-17 15:17:14 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia3335
+2024-05-17 15:17:14 === [ForkJoinPool.commonPool-worker-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3335
+2024-05-17 15:17:18 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:17:18 === [ForkJoinPool.commonPool-worker-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 打卡時間計算完成，用戶: Yilia213
+2024-05-17 15:17:18 === [ForkJoinPool.commonPool-worker-2] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:17:18 === [ForkJoinPool.commonPool-worker-2] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:21:25 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:21:25 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 15:21:25 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 15:21:28 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 5548 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 15:21:28 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 15:21:29 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 15:21:29 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+2024-05-17 15:21:29 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 15:21:29 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 15:21:29 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 15:21:29 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 15:21:29 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1763 ms
+2024-05-17 15:21:30 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 15:21:30 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4662752a
+2024-05-17 15:21:30 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 15:21:30 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 15:21:30 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 15:21:30 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 15:21:31 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 15:21:31 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 15:21:32 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 15:21:32 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:21:32 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 15:21:33 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 15:21:33 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: 2add3ce6-b348-4961-a087-6c748838e06b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 15:21:33 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18b88f7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@128ebca1, org.springframework.security.web.context.SecurityContextHolderFilter@4fc1eee5, org.springframework.security.web.header.HeaderWriterFilter@3d3c14c3, org.springframework.web.filter.CorsFilter@34128fed, org.springframework.security.web.authentication.logout.LogoutFilter@671c71e8, com.example.firstdemo.util.JwtAuthenticationFilter@62b09715, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36618b3b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7715d43c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10efb806, org.springframework.security.web.access.ExceptionTranslationFilter@685e5967, org.springframework.security.web.access.intercept.AuthorizationFilter@37c49a55]
+2024-05-17 15:21:33 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 15:21:33 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 6.152 seconds (process running for 6.579)
+2024-05-17 15:21:38 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia213
+2024-05-17 15:21:38 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia213
+2024-05-17 15:21:38 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia3335
+2024-05-17 15:21:38 === [ForkJoinPool.commonPool-worker-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3335
+2024-05-17 15:21:43 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:21:43 === [ForkJoinPool.commonPool-worker-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 打卡時間計算完成，用戶: Yilia213
+2024-05-17 15:21:43 === [ForkJoinPool.commonPool-worker-2] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:21:43 === [ForkJoinPool.commonPool-worker-2] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:21:59 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:21:59 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 15:21:59 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 15:22:00 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 7560 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 15:22:00 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 15:22:01 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 15:22:01 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2024-05-17 15:22:02 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 15:22:02 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 15:22:02 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 15:22:02 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 15:22:02 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1731 ms
+2024-05-17 15:22:02 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 15:22:03 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78b0ec3a
+2024-05-17 15:22:03 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 15:22:03 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 15:22:03 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 15:22:03 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 15:22:03 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 15:22:03 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 15:22:04 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 15:22:04 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:22:04 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 15:22:05 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 15:22:05 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: c230187c-20af-4edd-a2de-86a912cff8ab
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 15:22:05 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b18fa79, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24347d8b, org.springframework.security.web.context.SecurityContextHolderFilter@40477d52, org.springframework.security.web.header.HeaderWriterFilter@59e67a18, org.springframework.web.filter.CorsFilter@6418075c, org.springframework.security.web.authentication.logout.LogoutFilter@4c90fc3b, com.example.firstdemo.util.JwtAuthenticationFilter@535a518c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59b43e35, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66297b63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f9919a2, org.springframework.security.web.access.ExceptionTranslationFilter@70a3b, org.springframework.security.web.access.intercept.AuthorizationFilter@66ab3716]
+2024-05-17 15:22:06 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 15:22:06 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.862 seconds (process running for 6.339)
+2024-05-17 15:22:12 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia213
+2024-05-17 15:22:12 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia213
+2024-05-17 15:22:12 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia3335
+2024-05-17 15:22:12 === [ForkJoinPool.commonPool-worker-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3335
+2024-05-17 15:22:44 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:22:44 === [ForkJoinPool.commonPool-worker-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 打卡時間計算完成，用戶: Yilia213
+2024-05-17 15:22:44 === [ForkJoinPool.commonPool-worker-2] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:22:44 === [ForkJoinPool.commonPool-worker-2] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '2' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:23:02 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:23:02 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 15:23:02 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 15:23:03 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 21204 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 15:23:03 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 15:23:04 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 15:23:04 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2024-05-17 15:23:05 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 15:23:05 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 15:23:05 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 15:23:05 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 15:23:05 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1697 ms
+2024-05-17 15:23:05 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 15:23:06 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b441e56
+2024-05-17 15:23:06 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 15:23:06 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 15:23:06 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 15:23:06 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 15:23:06 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 15:23:06 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 15:23:07 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 15:23:07 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:23:07 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 15:23:08 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 15:23:08 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: 5f765b71-5439-4506-9044-cf1aadd740c0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 15:23:08 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31d791c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@623c9988, org.springframework.security.web.context.SecurityContextHolderFilter@70a3b, org.springframework.security.web.header.HeaderWriterFilter@4e2ad1f2, org.springframework.web.filter.CorsFilter@66ab3716, org.springframework.security.web.authentication.logout.LogoutFilter@4fe4b8b6, com.example.firstdemo.util.JwtAuthenticationFilter@4c6a4ffd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59e67a18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37289e90, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@103a1ad3, org.springframework.security.web.access.ExceptionTranslationFilter@701996e9, org.springframework.security.web.access.intercept.AuthorizationFilter@70a8654]
+2024-05-17 15:23:08 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 15:23:08 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.683 seconds (process running for 6.133)
+2024-05-17 15:23:11 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia213
+2024-05-17 15:23:11 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia213
+2024-05-17 15:23:11 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia3335
+2024-05-17 15:23:16 === [ForkJoinPool.commonPool-worker-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3335
+2024-05-17 15:23:33 === [ForkJoinPool.commonPool-worker-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:23:33 === [ForkJoinPool.commonPool-worker-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 打卡時間計算完成，用戶: Yilia213
+2024-05-17 15:23:33 === [ForkJoinPool.commonPool-worker-2] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:23:33 === [ForkJoinPool.commonPool-worker-2] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '3' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:53:09 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia23
+2024-05-17 15:53:09 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia1
+2024-05-17 15:53:09 === [ForkJoinPool.commonPool-worker-3] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia23
+2024-05-17 15:53:09 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia4
+2024-05-17 15:53:09 === [ForkJoinPool.commonPool-worker-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia1
+2024-05-17 15:53:09 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia6
+2024-05-17 15:53:09 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia2
+2024-05-17 15:53:09 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia3
+2024-05-17 15:53:09 === [ForkJoinPool.commonPool-worker-5] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia4
+2024-05-17 15:53:09 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia5
+2024-05-17 15:53:09 === [scheduling-1] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 開始計算打卡時間差，用戶: Yilia7
+2024-05-17 15:53:09 === [ForkJoinPool.commonPool-worker-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia6
+2024-05-17 15:54:27 === [HikariPool-1 housekeeper] === WARN  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s72ms46µs600ns).
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-7] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia2
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-9] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia5
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-10] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia7
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-4] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-10] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-8] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-6] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-7] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-4] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-3] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-5] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-6] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-9] === WARN  === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== SQL Error: 1062, SQLState: 23000
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-10] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-7] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-3] === INFO  === c.example.firstdemo.schedule.UserClockTimeSchedule ==== 打卡時間計算完成，用戶: Yilia23
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-5] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-9] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:54:27 === [ForkJoinPool.commonPool-worker-8] === ERROR === org.hibernate.engine.jdbc.spi.SqlExceptionHelper ==== Duplicate entry '1' for key 'time_clock_statistics.PRIMARY'
+2024-05-17 15:54:27 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:54:27 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 15:54:27 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 15:54:42 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 23148 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 15:54:42 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 15:54:42 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 15:54:42 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2024-05-17 15:54:43 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 15:54:43 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 15:54:43 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 15:54:43 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 15:54:43 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1671 ms
+2024-05-17 15:54:43 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 15:54:44 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4662752a
+2024-05-17 15:54:44 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 15:54:44 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 15:54:44 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 15:54:44 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 15:54:44 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 15:54:45 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 15:54:45 === [main] === ERROR === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Failed to initialize JPA EntityManagerFactory: Entity 'com.example.firstdemo.dao.TimeClock' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+2024-05-17 15:54:45 === [main] === WARN  === o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext ==== Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Entity 'com.example.firstdemo.dao.TimeClock' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+2024-05-17 15:54:45 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 15:54:45 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 15:54:45 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2024-05-17 15:54:45 === [main] === INFO  === o.s.b.a.logging.ConditionEvaluationReportLogger ==== 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-05-17 15:54:45 === [main] === ERROR === org.springframework.boot.SpringApplication ==== Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Entity 'com.example.firstdemo.dao.TimeClock' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.firstdemo.FirstdemoApplication.main(FirstdemoApplication.java:14)
+Caused by: org.hibernate.AnnotationException: Entity 'com.example.firstdemo.dao.TimeClock' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.hibernate.boot.model.internal.InheritanceState.determineDefaultAccessType(InheritanceState.java:279)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:215)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:348)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:237)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:423)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:256)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:279)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:322)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 16 common frames omitted
+2024-05-17 15:55:24 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 20136 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 15:55:24 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 15:55:25 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 15:55:25 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2024-05-17 15:55:25 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 15:55:25 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 15:55:25 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 15:55:26 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 15:55:26 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1678 ms
+2024-05-17 15:55:26 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 15:55:26 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46612bfc
+2024-05-17 15:55:26 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 15:55:26 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 15:55:26 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 15:55:26 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 15:55:27 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 15:55:27 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 15:55:28 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 15:55:28 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 15:55:28 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 15:55:28 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 15:55:28 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: 6640ade7-6d0f-4451-aa27-acc9a160cbf7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 15:55:29 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24347d8b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6418075c, org.springframework.security.web.context.SecurityContextHolderFilter@2a1be9f8, org.springframework.security.web.header.HeaderWriterFilter@37289e90, org.springframework.web.filter.CorsFilter@f9919a2, org.springframework.security.web.authentication.logout.LogoutFilter@1e14ed59, com.example.firstdemo.util.JwtAuthenticationFilter@38f981b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66297b63, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d7f2719, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@530ee11a, org.springframework.security.web.access.ExceptionTranslationFilter@18baee88, org.springframework.security.web.access.intercept.AuthorizationFilter@103a1ad3]
+2024-05-17 15:55:29 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 15:55:29 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.694 seconds (process running for 6.119)
+2024-05-17 15:55:29 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia23
+2024-05-17 15:55:32 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:55:32 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia23
+2024-05-17 15:55:32 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 15:55:32 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia1
+2024-05-17 15:55:32 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:55:32 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia1
+2024-05-17 15:55:32 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 15:55:32 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia4
+2024-05-17 15:55:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:55:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia4
+2024-05-17 15:55:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:3
+2024-05-17 15:55:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia6
+2024-05-17 15:55:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:55:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia6
+2024-05-17 15:55:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 15:55:33 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia2
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia2
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia3
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia5
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia5
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 15:55:34 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia7
+2024-05-17 15:55:35 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 15:55:35 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia7
+2024-05-17 15:55:35 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:20 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 16:00:20 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 16:00:20 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 16:00:23 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 22260 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 16:00:23 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 16:00:24 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 16:00:24 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2024-05-17 16:00:25 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 16:00:25 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 16:00:25 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 16:00:25 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 16:00:25 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1710 ms
+2024-05-17 16:00:25 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 16:00:26 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58c42c8c
+2024-05-17 16:00:26 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 16:00:26 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 16:00:26 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 16:00:26 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 16:00:26 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 16:00:26 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 16:00:27 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 16:00:27 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 16:00:27 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 16:00:28 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 16:00:28 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: 8e65cd9c-f622-4eee-8e64-86a4085256ee
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 16:00:28 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5924ea91, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bc239db, org.springframework.security.web.context.SecurityContextHolderFilter@650997b0, org.springframework.security.web.header.HeaderWriterFilter@39f5eba4, org.springframework.web.filter.CorsFilter@709c6768, org.springframework.security.web.authentication.logout.LogoutFilter@76685ab0, com.example.firstdemo.util.JwtAuthenticationFilter@2b73bd6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77e24d3c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66831b14, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e356ed6, org.springframework.security.web.access.ExceptionTranslationFilter@30b0f674, org.springframework.security.web.access.intercept.AuthorizationFilter@1ea78c72]
+2024-05-17 16:00:29 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 16:00:29 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.953 seconds (process running for 6.387)
+2024-05-17 16:00:29 === [AsyncTask-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia23
+2024-05-17 16:00:29 === [AsyncTask-3] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia1
+2024-05-17 16:00:29 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia23
+2024-05-17 16:00:29 === [AsyncTask-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia1
+2024-05-17 16:00:32 === [AsyncTask-5] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia4
+2024-05-17 16:00:32 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia6
+2024-05-17 16:00:32 === [AsyncTask-7] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia6
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia4
+2024-05-17 16:00:32 === [AsyncTask-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:32 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:32 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:3
+2024-05-17 16:00:32 === [AsyncTask-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia2
+2024-05-17 16:00:32 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia2
+2024-05-17 16:00:32 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia3
+2024-05-17 16:00:32 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:32 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia5
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia5
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia7
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:32 === [AsyncTask-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:32 === [AsyncTask-3] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:32 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:32 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:32 === [AsyncTask-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia7
+2024-05-17 16:00:32 === [AsyncTask-5] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:32 === [AsyncTask-7] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:32 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:41 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 16:00:41 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 16:00:41 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 16:00:44 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 15436 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 16:00:45 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 16:00:45 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 16:00:45 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2024-05-17 16:00:46 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 16:00:46 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 16:00:46 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 16:00:46 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 16:00:46 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1708 ms
+2024-05-17 16:00:46 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 16:00:47 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b441e56
+2024-05-17 16:00:47 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 16:00:47 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 16:00:47 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 16:00:47 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 16:00:47 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 16:00:47 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 16:00:48 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 16:00:48 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 16:00:48 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 16:00:49 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 16:00:49 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: b3a83b8e-7b0b-4f0d-8485-5b1c28a5913d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 16:00:49 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31d791c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@623c9988, org.springframework.security.web.context.SecurityContextHolderFilter@70a3b, org.springframework.security.web.header.HeaderWriterFilter@4e2ad1f2, org.springframework.web.filter.CorsFilter@66ab3716, org.springframework.security.web.authentication.logout.LogoutFilter@4fe4b8b6, com.example.firstdemo.util.JwtAuthenticationFilter@3e33b52e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59e67a18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37289e90, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@103a1ad3, org.springframework.security.web.access.ExceptionTranslationFilter@701996e9, org.springframework.security.web.access.intercept.AuthorizationFilter@70a8654]
+2024-05-17 16:00:50 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 16:00:50 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.758 seconds (process running for 6.183)
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia23
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia23
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia1
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia1
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia4
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia4
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:3
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia6
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia6
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia2
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia2
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia3
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia5
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia5
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia7
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia7
+2024-05-17 16:00:50 === [scheduling-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:01:13 === [SpringApplicationShutdownHook] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 16:01:13 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2024-05-17 16:01:13 === [SpringApplicationShutdownHook] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2024-05-17 16:01:16 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Starting FirstdemoApplication using Java 17.0.11 with PID 9532 (C:\Users\yilia.lin\IdeaProjects\firstdemo\target\classes started by yilia.lin in C:\Users\yilia.lin\IdeaProjects\firstdemo)
+2024-05-17 16:01:16 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== The following 1 profile is active: "dev"
+2024-05-17 16:01:17 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-17 16:01:17 === [main] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2024-05-17 16:01:17 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port 8080 (http)
+2024-05-17 16:01:17 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2024-05-17 16:01:17 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-17 16:01:18 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2024-05-17 16:01:18 === [main] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 1709 ms
+2024-05-17 16:01:18 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2024-05-17 16:01:18 === [main] === INFO  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5514579e
+2024-05-17 16:01:18 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2024-05-17 16:01:18 === [main] === INFO  === org.hibernate.jpa.internal.util.LogHelper ==== HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-17 16:01:18 === [main] === INFO  === org.hibernate.Version ==== HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-17 16:01:18 === [main] === INFO  === o.hibernate.cache.internal.RegionFactoryInitiator ==== HHH000026: Second-level cache disabled
+2024-05-17 16:01:19 === [main] === INFO  === o.s.o.j.persistenceunit.SpringPersistenceUnitInfo ==== No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-17 16:01:19 === [main] === WARN  === org.hibernate.orm.deprecation ==== HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-17 16:01:20 === [main] === INFO  === o.h.e.t.jta.platform.internal.JtaPlatformInitiator ==== HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-17 16:01:20 === [main] === INFO  === o.s.orm.jpa.LocalContainerEntityManagerFactoryBean ==== Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-17 16:01:20 === [main] === INFO  === o.s.data.jpa.repository.query.QueryEnhancerFactory ==== Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-17 16:01:20 === [main] === WARN  === o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ==== spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-17 16:01:20 === [main] === WARN  === o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ==== 
+
+Using generated security password: e66cb477-6dc9-4a57-9700-e947bce963e7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-17 16:01:21 === [main] === INFO  === o.s.security.web.DefaultSecurityFilterChain ==== Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42a198dd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5924ea91, org.springframework.security.web.context.SecurityContextHolderFilter@bb3487c, org.springframework.security.web.header.HeaderWriterFilter@62818ab0, org.springframework.web.filter.CorsFilter@7bc239db, org.springframework.security.web.authentication.logout.LogoutFilter@5603632c, com.example.firstdemo.util.JwtAuthenticationFilter@2921a36a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7337f87e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77e24d3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@709c6768, org.springframework.security.web.access.ExceptionTranslationFilter@4cb939d5, org.springframework.security.web.access.intercept.AuthorizationFilter@73bd146c]
+2024-05-17 16:01:21 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port 8080 (http) with context path ''
+2024-05-17 16:01:21 === [main] === INFO  === com.example.firstdemo.FirstdemoApplication ==== Started FirstdemoApplication in 5.88 seconds (process running for 6.306)
+2024-05-17 16:01:21 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia23
+2024-05-17 16:01:21 === [AsyncTask-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia23
+2024-05-17 16:01:21 === [AsyncTask-3] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia1
+2024-05-17 16:01:21 === [AsyncTask-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia1
+2024-05-17 16:01:21 === [AsyncTask-5] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia4
+2024-05-17 16:01:21 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia4
+2024-05-17 16:01:21 === [AsyncTask-7] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia6
+2024-05-17 16:01:21 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia6
+2024-05-17 16:01:21 === [AsyncTask-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:01:21 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:01:21 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:3
+2024-05-17 16:01:21 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:01:21 === [AsyncTask-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia2
+2024-05-17 16:01:21 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia2
+2024-05-17 16:01:21 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia3
+2024-05-17 16:01:21 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia3
+2024-05-17 16:01:21 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:01:21 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:01:21 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia5
+2024-05-17 16:01:21 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia5
+2024-05-17 16:01:21 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
+2024-05-17 16:01:21 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算打卡時間差 會員:Yilia7
+2024-05-17 16:01:22 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:01:22 === [AsyncTask-3] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:01:22 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 排程:計算會員打卡次數 會員:Yilia7
+2024-05-17 16:01:22 === [AsyncTask-1] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:01:22 === [AsyncTask-8] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:01:22 === [AsyncTask-2] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:01:22 === [AsyncTask-5] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:01:22 === [AsyncTask-4] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:01:22 === [AsyncTask-7] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 計算完畢
+2024-05-17 16:01:22 === [AsyncTask-6] === INFO  === com.example.firstdemo.async.UserClockTimeTask ==== 會員打卡次數:2
