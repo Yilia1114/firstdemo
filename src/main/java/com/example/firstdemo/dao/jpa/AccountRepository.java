@@ -1,4 +1,4 @@
-package com.example.firstdemo.dao.JPA;
+package com.example.firstdemo.dao.jpa;
 import com.example.firstdemo.dao.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
@@ -6,5 +6,4 @@ import org.springframework.stereotype.Service;
 @Service
 public interface AccountRepository extends JpaRepository<Account, Long> {
     Account findByUsername(String user);
-    Account findById(int id);
 }

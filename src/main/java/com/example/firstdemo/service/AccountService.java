@@ -2,12 +2,11 @@ package com.example.firstdemo.service;
 
 import com.example.firstdemo.Exception.BusinessException;
 import com.example.firstdemo.Exception.SuccessResponse;
-import com.example.firstdemo.controller.AccountController;
-import com.example.firstdemo.dao.MyBatis.AccountMapper;
+import com.example.firstdemo.dao.mybatis.AccountMapper;
 import com.example.firstdemo.util.JwtUtils;
 import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.controller.pojo.AccountDTO;
-import com.example.firstdemo.dao.JPA.AccountRepository;
+import com.example.firstdemo.dao.jpa.AccountRepository;
 import com.example.firstdemo.service.helper.AccountValidationHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,8 +25,6 @@ public class AccountService {
 
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    private final JwtUtils jwtUtils;
-
     private final AccountMapper accountMapper;
 
     private final MessageSource messageSource;
@@ -37,9 +34,9 @@ public class AccountService {
     public ResponseEntity<SuccessResponse> createAccount(AccountDTO accountDTO,Locale locale) {
 
         //驗證帳號密碼
-        String Code =  AccountValidationHelper.validateAccount(accountDTO, accountRepository);
-        if(Code != null){
-            String errorMessage = messageSource.getMessage(Code, null, locale);
+        String code =  AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+        if(code != null){
+            String errorMessage = messageSource.getMessage(code, null, locale);
             throw new BusinessException(errorMessage);
         }
 
@@ -57,8 +54,6 @@ public class AccountService {
     //取得特定ID的帳號
     public ResponseEntity<SuccessResponse> getAccountById(Long id) {
         Account account = accountRepository.findById(id).orElse(null);
-        //密碼不直接顯示回JSON
-        account.setPassword(null);
 
         if (account != null) {
             return ResponseEntity.ok(SuccessResponse.successWithData("註冊成功",account));
@@ -73,9 +68,9 @@ public class AccountService {
 
         if (existingAccount != null) {
             //驗證要修改的帳號密碼
-            String Code = AccountValidationHelper.validateAccount(accountDTO, accountRepository);
-            if(Code != null){
-                String errorMessage = messageSource.getMessage(Code, null, locale);
+            String code = AccountValidationHelper.validateAccount(accountDTO, accountRepository);
+            if(code != null){
+                String errorMessage = messageSource.getMessage(code, null, locale);
                 throw new BusinessException(errorMessage);
             }
 
@@ -110,7 +105,7 @@ public class AccountService {
         if (account != null && bCryptPasswordEncoder.matches(accountDTO.getPassword(), account.getPassword())) {
             // 密碼匹配，登入成功
             // 將userid包到jwt 回傳Token
-                String token = jwtUtils.generateToken(account.getUsername());
+                String token = JwtUtils.generateToken(account.getUsername());
                 return ResponseEntity.ok(SuccessResponse.successToken(token));
 
         } else {

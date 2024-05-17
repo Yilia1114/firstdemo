@@ -1,8 +1,7 @@
 package com.example.firstdemo.schedule;
 
 import com.example.firstdemo.async.UserClockTimeTask;
-import com.example.firstdemo.dao.JPA.TimeClockRepository;
-import com.example.firstdemo.dao.JPA.TimeClockStatisticsRepository;
+import com.example.firstdemo.dao.jpa.TimeClockRepository;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,14 +10,12 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
 public class UserClockTimeSchedule {
 
     private final TimeClockRepository timeClockRepository;
-    private final TimeClockStatisticsRepository timeClockStatisticsRepository;
     private final UserClockTimeTask userClockTimeTasks;
     private static final Logger logger = LoggerFactory.getLogger(UserClockTimeSchedule.class);
 

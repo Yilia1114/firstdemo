@@ -1,14 +1,11 @@
 package com.example.firstdemo.async;
 
-import com.example.firstdemo.dao.JPA.TimeClockRepository;
-import com.example.firstdemo.dao.JPA.TimeClockStatisticsRepository;
+import com.example.firstdemo.dao.jpa.TimeClockRepository;
+import com.example.firstdemo.dao.jpa.TimeClockStatisticsRepository;
 import com.example.firstdemo.dao.TimeClockStatistics;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Component;
 
 import java.sql.Timestamp;
@@ -37,9 +34,9 @@ public class UserClockTimeTask {
             long minutes = timeDifferenceInMillis / 1000 / 60;
 
             TimeClockStatistics statistics = new TimeClockStatistics();
-            statistics.setUsername(user);
-            statistics.setTc_statistis_update_time(new Timestamp(System.currentTimeMillis())); // 當前時間
-            statistics.setUser_time_lag(minutes);
+            statistics.setUserName(user);
+            statistics.setTcStatisticsUpdateTime(new Timestamp(System.currentTimeMillis())); // 當前時間
+            statistics.setUserTimeLag(minutes);
             timeClockStatisticsRepository.save(statistics);
         }
         return null;

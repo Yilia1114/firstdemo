@@ -1,4 +1,4 @@
-package com.example.firstdemo.dao.MyBatis;
+package com.example.firstdemo.dao.mybatis;
 
 import com.example.firstdemo.dao.Account;
 import org.apache.ibatis.annotations.Param;

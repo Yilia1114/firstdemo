@@ -1,16 +1,18 @@
 package com.example.firstdemo.service.helper;
 
-import com.example.firstdemo.Exception.BusinessException;
-import com.example.firstdemo.controller.AccountController;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.Account;
-import com.example.firstdemo.dao.JPA.AccountRepository;
+import com.example.firstdemo.dao.jpa.AccountRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.util.StringUtils;
+import org.springframework.util.ObjectUtils;
+
 
 public class AccountValidationHelper {
 
+    private AccountValidationHelper() {
+        throw new IllegalStateException("Utility class");
+    }
     private static final String USERNAME_PATTERN = "^[a-zA-Z0-9]+$";
     private static final String PASSWORD_PATTERN = "^(?=.*[A-Z])[a-zA-Z0-9]+$";
     private static final Logger logger = LoggerFactory.getLogger(AccountValidationHelper.class);
@@ -49,7 +51,7 @@ public class AccountValidationHelper {
     }
 
     private static boolean isInvalidAccount(AccountDTO accountDTO) {
-        return StringUtils.isEmpty(accountDTO.getUsername()) || StringUtils.isEmpty(accountDTO.getPassword());
+        return ObjectUtils.isEmpty(accountDTO.getUsername()) || ObjectUtils.isEmpty(accountDTO.getPassword());
     }
 
     private static boolean isValidUsernameFormat(String username) {
