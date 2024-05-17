@@ -29,12 +29,12 @@ public class TimeclockService {
         Account account = accountRepository.findByUsername(username);
 
         if (account!=null){
-            log.info("確認為會員，開始建立會員打卡資料");
             TimeClock newtimeclock = new TimeClock();
             newtimeclock.setTime_clock_id(timeClockRepository.count()+1);
             newtimeclock.setUsername(account.getUsername());
             newtimeclock.setUser_clock_time(Timestamp.valueOf(LocalDateTime.now()));
             timeClockRepository.save(newtimeclock);
+            log.info("會員打卡成功");
             return ResponseEntity.ok(SuccessResponse.successMessage("打卡成功"));
         }
         else {

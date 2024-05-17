@@ -5,6 +5,8 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 import java.sql.Time;
+import java.sql.Timestamp;
+import java.util.Locale;
 
 @Entity
 @Getter
@@ -13,7 +15,7 @@ public class TimeClockStatistics {
     @Id
     private  long tc_statistis_id;
     private String username;
-    private Time tc_statistis_update_time;
-    private Time user_time_lag;
+    private Timestamp tc_statistis_update_time;
+    private Long user_time_lag;
 
 }
