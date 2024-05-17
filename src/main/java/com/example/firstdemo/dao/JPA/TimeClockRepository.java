@@ -18,5 +18,4 @@ public interface TimeClockRepository extends JpaRepository<TimeClock, Long> {
     @Query(value = "select user_clock_time from time_clock tc where username = :username and DATE(user_clock_time) = CURDATE() order by user_clock_time asc LIMIT 1 ;",nativeQuery = true)
     Timestamp  findListUserClockTimeByUsernameOrderByUserClockTimeAsc(String username);
 
-
 }
