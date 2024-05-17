@@ -3,7 +3,6 @@ package com.example.firstdemo.schedule;
 import com.example.firstdemo.async.UserClockTimeTask;
 import com.example.firstdemo.dao.JPA.TimeClockRepository;
 import com.example.firstdemo.dao.JPA.TimeClockStatisticsRepository;
-import com.example.firstdemo.service.helper.AccountValidationHelper;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +10,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
@@ -23,12 +24,13 @@ public class UserClockTimeSchedule {
 
     @Scheduled(fixedRate = 1800000) //用於測試
     //@Scheduled(cron = "0 0 0 * * ?") // 每天晚上凌晨12點執行一次
-    public void calculateUserClockTime()  {
+    public void calculateUserClockTime() {
         List<String> users = timeClockRepository.findDistinctUsernames();
-        for (String user : users) {
-            userClockTimeTasks.processUserClockTime(user);
-            userClockTimeTasks.processUserClockCount(user);
-        }
+        List<CompletableFuture<Void>> futures = users.stream()
+                .map(userClockTimeTasks::processUserClockTime)
+                .toList();
+        CompletableFuture<Void> allFutures = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
+        allFutures.thenRun(() -> logger.info("所有會員打卡時間已計算完成"));
 
     }
 
