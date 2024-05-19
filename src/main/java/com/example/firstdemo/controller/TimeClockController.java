@@ -1,6 +1,6 @@
 package com.example.firstdemo.controller;
 
-import com.example.firstdemo.Exception.SuccessResponse;
+import com.example.firstdemo.exception.SuccessResponse;
 import com.example.firstdemo.service.TimeClockService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.example.firstdemo.Exception;
+package com.example.firstdemo.exception;
 
 import lombok.Builder;
 import lombok.Data;
@@ -8,5 +8,4 @@ import lombok.Data;
 public class ErrorResponse {
     private int status;
     private String message;
-
 }

@@ -8,5 +8,4 @@ import org.apache.ibatis.annotations.Select;
 public interface AccountMapper {
     @Select("select * from account where username = #{username}")
     Account findByUsername(@Param("username") String username);
-
 }

@@ -1,7 +1,7 @@
 package com.example.firstdemo.service;
 
-import com.example.firstdemo.Exception.BusinessException;
-import com.example.firstdemo.Exception.SuccessResponse;
+import com.example.firstdemo.exception.BusinessException;
+import com.example.firstdemo.exception.SuccessResponse;
 import com.example.firstdemo.dao.mybatis.AccountMapper;
 import com.example.firstdemo.util.JwtUtils;
 import com.example.firstdemo.dao.Account;
@@ -51,18 +51,8 @@ public class AccountService {
     }
 
 
-    //取得特定ID的帳號
-    public ResponseEntity<SuccessResponse> getAccountById(Long id) {
-        Account account = accountRepository.findById(id).orElse(null);
 
-        if (account != null) {
-            return ResponseEntity.ok(SuccessResponse.successWithData("註冊成功",account));
-        } else {
-            throw new BusinessException("取得失敗");
-        }
-    }
-
-    //更新特定ID的帳號密碼
+    //修改帳號密碼
     public ResponseEntity<SuccessResponse> updateAccount(Long id, AccountDTO accountDTO,Locale locale) {
         Account existingAccount = accountRepository.findById(id).orElse(null);
 
@@ -84,16 +74,6 @@ public class AccountService {
         }
     }
 
-    //刪除特定ID的帳號
-    public ResponseEntity<SuccessResponse> deleteAccount(Long id) {
-        Account existingAccount = accountRepository.findById(id).orElse(null);
-        if (existingAccount != null) {
-            accountRepository.delete(existingAccount);
-            return ResponseEntity.ok(SuccessResponse.successMessage("刪除成功"));
-        } else {
-            throw new BusinessException("刪除失敗");
-        }
-    }
 
     // 登入
     public ResponseEntity<SuccessResponse> login(AccountDTO accountDTO,Locale locale) {

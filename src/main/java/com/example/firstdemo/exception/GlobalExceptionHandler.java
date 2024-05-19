@@ -1,4 +1,4 @@
-package com.example.firstdemo.Exception;
+package com.example.firstdemo.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
