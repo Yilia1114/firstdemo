@@ -14,7 +14,7 @@ public class JwtUtils {
     private static final String SECRET = "Yilia1114HappyUsedJwtToOpenDoors";
     private static final long EXPIRATION_TIME = 432_000_000;// 有效期為5天（以毫秒為單位）
 
-    //產出
+    //產出Token
     public static String generateToken(String username) {
         Key secretKey = Keys.hmacShaKeyFor(SECRET.getBytes());
         return Jwts.builder()
@@ -24,7 +24,7 @@ public class JwtUtils {
                 .compact();
     }
 
-    //驗證
+    //驗證Token
     public boolean validateToken(String token) {
         try {
             Key secretKey = Keys.hmacShaKeyFor(SECRET.getBytes());
@@ -35,7 +35,7 @@ public class JwtUtils {
         }
     }
 
-    //解析
+    //解析Token
     public String extractUsername(String token) {
         Key secretKey = Keys.hmacShaKeyFor(SECRET.getBytes());
         Claims claims = Jwts.parserBuilder().setSigningKey(secretKey).build().parseClaimsJws(token).getBody();

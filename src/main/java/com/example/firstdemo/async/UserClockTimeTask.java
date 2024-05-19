@@ -20,10 +20,10 @@ public class UserClockTimeTask {
     private final TimeClockStatisticsRepository timeClockStatisticsRepository;
 
     @Async
-    public CompletableFuture<Void> processUserClockTime(String user) {
-        Timestamp userEarliestClockTime = timeClockRepository.findListUserClockTimeByUsernameOrderByUserClockTimeAsc(user);
-        Timestamp userLattimeClockTime = timeClockRepository.findFirstUserClockTimeByUsernameOrderByUserClockTimeDesc(user);
-
+    public CompletableFuture<Void> processUserClockTime(String username) {
+        Timestamp userEarliestClockTime = timeClockRepository.findListUserClockTimeByUsernameOrderByUserClockTimeAsc(username);
+        Timestamp userLattimeClockTime = timeClockRepository.findFirstUserClockTimeByUsernameOrderByUserClockTimeDesc(username);
+        log.debug("會員{} 開始計算時間差", username);
         if (userEarliestClockTime != null && userLattimeClockTime != null) {
 
             long earliestTime = userEarliestClockTime.getTime();
@@ -34,10 +34,11 @@ public class UserClockTimeTask {
             long minutes = timeDifferenceInMillis / 1000 / 60;
 
             TimeClockStatistics statistics = new TimeClockStatistics();
-            statistics.setUserName(user);
+            statistics.setUserName(username);
             statistics.setTcStatisticsUpdateTime(new Timestamp(System.currentTimeMillis())); // 當前時間
             statistics.setUserTimeLag(minutes);
             timeClockStatisticsRepository.save(statistics);
+            log.debug("會員{} 時間差計算完畢", username);
         }
         return null;
     }
