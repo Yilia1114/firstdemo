@@ -14,14 +14,22 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class TimeClockController {
     private final TimeClockService timeClockService;
-    @PostMapping("/TimeClock")
+    //打卡新增
+    @PostMapping("/time_clocks ")
     public ResponseEntity<SuccessResponse> userTimeClock(@AuthenticationPrincipal String username) {
-        log.info("開始會員打卡 [帳號:'{}']", username);
+        log.info("執行: 會員打卡 [帳號:'{}']", username);
         return timeClockService.userTimeClock(username);
     }
-    @PostMapping("/FailTimeClock/{username}")
-    public ResponseEntity<SuccessResponse> failTimeClock(@PathVariable  String username) {
-        log.info("開始會員打卡 [帳號:'{}']", username);
+    //補卡
+    @PutMapping ("/time_clocks/{id}")
+    public ResponseEntity<SuccessResponse> updateTimeClock(@PathVariable Long id, @AuthenticationPrincipal String username) {
+        log.info("執行: 會員補卡 [帳號:'{}']", username);
+        return timeClockService.updateTimeClock(id,username);
+    }
+    //打卡失敗
+    @PostMapping("/fail_time_clocks")
+    public ResponseEntity<SuccessResponse> failTimeClock(@AuthenticationPrincipal String username) {
+        log.info("執行: 打卡失敗");
         return timeClockService.userFailTimeClock(username);
     }
 }

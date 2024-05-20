@@ -40,6 +40,23 @@ public class TimeClockService {
             throw new BusinessException("打卡失敗");
         }
     }
+    @Transactional
+    public ResponseEntity<SuccessResponse> updateTimeClock(Long id ,String username) {
+        //確認是否為會員
+        log.debug("確認是否為會員: {}", username);
+        Account account = accountRepository.findByUsername(username);
+
+        if (account != null) {
+            TimeClock newtimeclock = new TimeClock();
+            newtimeclock.setUserName(account.getUsername());
+            newtimeclock.setUserClockTime(Timestamp.valueOf(LocalDateTime.now()));
+            timeClockRepository.save(newtimeclock);
+            throw new IllegalArgumentException("模擬突發錯誤");
+        } else {
+            log.error("查無會員資料, 用戶名: {}", username);
+            throw new BusinessException("打卡失敗");
+        }
+    }
 
     @Transactional
     public ResponseEntity<SuccessResponse> userFailTimeClock(String username) {
@@ -57,7 +74,6 @@ public class TimeClockService {
             log.error("查無會員資料, 用戶名: {}", username);
             throw new BusinessException("打卡失敗");
         }
-
     }
 
 }

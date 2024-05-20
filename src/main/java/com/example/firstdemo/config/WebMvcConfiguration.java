@@ -1,12 +1,8 @@
 package com.example.firstdemo.config;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
-import java.util.Locale;
 
 @Configuration
 public class WebMvcConfiguration implements WebMvcConfigurer{
@@ -22,15 +18,4 @@ public class WebMvcConfiguration implements WebMvcConfigurer{
         ;
     }
 
-    /**
-     * 默認解析器 其中locale表示默認語言,當請求中未包含語種信息，則設置默認語種
-     * 當前默認為TAIWAN, zh_TW
-     */
-    @Bean
-    public LocaleResolver localeResolver() {
-        AcceptHeaderLocaleResolver resolver = new AcceptHeaderLocaleResolver();
-        Locale defaultLocale = Locale.TAIWAN;
-        resolver.setDefaultLocale(defaultLocale); // 设置默认语言
-        return resolver;
-    }
 }
