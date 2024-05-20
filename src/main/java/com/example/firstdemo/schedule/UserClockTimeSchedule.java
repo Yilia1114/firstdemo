@@ -19,7 +19,7 @@ public class UserClockTimeSchedule {
     private final UserClockTimeTask userClockTimeTasks;
     private static final Logger logger = LoggerFactory.getLogger(UserClockTimeSchedule.class);
 
-    @Scheduled(fixedRate = 1800000) //用於測試
+    @Scheduled(fixedRate = 5000) //用於測試
     //@Scheduled(cron = "0 0 0 * * ?") // 每天晚上凌晨12點執行一次
     public void calculateUserClockTime() {
         List<String> users = timeClockRepository.findDistinctUsernames();

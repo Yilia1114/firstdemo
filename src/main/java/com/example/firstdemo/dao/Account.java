@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+@Table(name = "account")
 @Entity
 @Getter
 @Setter

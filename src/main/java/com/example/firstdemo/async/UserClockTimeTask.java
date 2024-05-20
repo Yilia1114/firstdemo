@@ -23,7 +23,7 @@ public class UserClockTimeTask {
     public CompletableFuture<Void> processUserClockTime(String username) {
         Timestamp userEarliestClockTime = timeClockRepository.findListUserClockTimeByUsernameOrderByUserClockTimeAsc(username);
         Timestamp userLattimeClockTime = timeClockRepository.findFirstUserClockTimeByUsernameOrderByUserClockTimeDesc(username);
-        log.debug("會員{} 開始計算時間差", username);
+        log.info("會員{} 開始計算時間差", username);
         if (userEarliestClockTime != null && userLattimeClockTime != null) {
 
             long earliestTime = userEarliestClockTime.getTime();

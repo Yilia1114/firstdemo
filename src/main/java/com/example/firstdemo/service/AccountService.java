@@ -46,8 +46,8 @@ public class AccountService {
         newAccount.setUsername(accountDTO.getUsername());
         newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
         accountRepository.save(newAccount);
-        log.info("註冊完畢");
-        return ResponseEntity.ok(SuccessResponse.successMessage("註冊成功"));
+        String successMessage = messageSource.getMessage("success.registration", null, locale);
+        return ResponseEntity.ok(SuccessResponse.successMessage(successMessage));
     }
 
 
@@ -68,9 +68,11 @@ public class AccountService {
             existingAccount.setUsername(accountDTO.getUsername());
             existingAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
             accountRepository.save(existingAccount);
-            return ResponseEntity.ok(SuccessResponse.successMessage("更新成功"));
+            String successMessage = messageSource.getMessage("success.update", null, locale);
+            return ResponseEntity.ok(SuccessResponse.successMessage(successMessage));
         } else {
-            throw new BusinessException("更新失敗");
+            String errorMessage = messageSource.getMessage("error.update", null, locale);
+            throw new BusinessException(errorMessage);
         }
     }
 

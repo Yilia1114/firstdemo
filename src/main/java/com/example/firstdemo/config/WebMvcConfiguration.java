@@ -14,10 +14,10 @@ public class WebMvcConfiguration implements WebMvcConfigurer{
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")             // 允许跨域请求的path，支持路径通配符，如：/api/**
                 .allowedOrigins("*")                    // 允许发起请求的源
-                .allowedHeaders("*")                    // 允许客户端的提交的 Header，通配符 * 可能有浏览器兼容问题
-                .allowedMethods("GET")                  // 允许客户端使用的请求方法
-                .allowCredentials(false)                // 不允许携带凭证
-                .exposedHeaders("X-Auth-Token, X-Foo")  // 允许额外访问的 Response Header
+                .allowedHeaders("*")                    // 允許用戶端提交的 Header
+                .allowedMethods("GET")                  // 允許用戶端使用的请求方法
+                .allowCredentials(false)                // 不允許携带憑證
+                .exposedHeaders("X-Auth-Token, X-Foo")  // 允許访问的 Response Header
                 .maxAge(3600)                           // 预检缓存一个小时
         ;
     }
@@ -29,7 +29,8 @@ public class WebMvcConfiguration implements WebMvcConfigurer{
     @Bean
     public LocaleResolver localeResolver() {
         AcceptHeaderLocaleResolver resolver = new AcceptHeaderLocaleResolver();
-        resolver.setDefaultLocale(Locale.TAIWAN); // 设置默认语言
+        Locale defaultLocale = Locale.TAIWAN;
+        resolver.setDefaultLocale(defaultLocale); // 设置默认语言
         return resolver;
     }
 }

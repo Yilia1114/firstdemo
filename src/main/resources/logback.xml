@@ -47,7 +47,7 @@
     </appender>
 
     <!-- 設置根日誌記錄器 -->
-    <root level="DEBUG">
+    <root level="INFO">
         <!-- 控制台輸出 -->
         <appender-ref ref="CONSOLE" />
         <!-- INFO級別的日誌輸出到info.log文件 -->

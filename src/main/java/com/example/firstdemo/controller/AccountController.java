@@ -22,22 +22,32 @@ public class AccountController {
 
     //註冊
     @PostMapping("/account")
-    public ResponseEntity<SuccessResponse> createAccount(@RequestBody AccountDTO accountDTO,@RequestHeader(value = "Accept-Language", required = false) Locale locale) {
-        log.info("開始註冊會員 [會員:'{}']",accountDTO.getUsername());
+    public ResponseEntity<SuccessResponse> createAccount(@RequestBody AccountDTO accountDTO, @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
+        log.info("開始註冊會員 [會員:'{}']", accountDTO.getUsername());
+        if (locale == null) {
+            locale = Locale.getDefault(); // 或者指定一个默认的 Locale，例如 new Locale("zh", "TW")
+        }
         return accountService.createAccount(accountDTO, locale);
     }
 
     //修改帳號密碼
     @PutMapping("/account/{id}")
-    public ResponseEntity<SuccessResponse> updateAccount(@PathVariable Long id, @RequestBody AccountDTO accountDTO,@RequestHeader(value = "Accept-Language", required = false) Locale locale) {
+    public ResponseEntity<SuccessResponse> updateAccount(@PathVariable Long id, @RequestBody AccountDTO accountDTO, @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
         log.info("開始修改帳號密碼 [會員:'{}']", accountDTO.getUsername());
-        return accountService.updateAccount(id, accountDTO,locale);
+        if (locale == null) {
+            locale = Locale.getDefault(); // 或者指定一个默认的 Locale，例如 new Locale("zh", "TW")
+        }
+        return accountService.updateAccount(id, accountDTO, locale);
     }
 
+    //登入
     @PostMapping("/login")
     public ResponseEntity<SuccessResponse> login(@RequestBody AccountDTO accountDTO,
                                                  @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
-        log.info("開始會員登入並取得Token [會員: '{}']",accountDTO.getUsername());
+        log.info("開始會員登入並取得Token [會員: '{}']", accountDTO.getUsername());
+        if (locale == null) {
+            locale = Locale.getDefault(); // 或者指定一个默认的 Locale，例如 new Locale("zh", "TW")
+        }
         return accountService.login(accountDTO, locale);
     }
 

@@ -27,17 +27,17 @@ public class AccountValidationHelper {
 
         if (isDuplicateAccount(accountDTO, accountRepository)) {
             logger.error("欲建立的帳號{}已存在",accountDTO.getUsername());
-            return "error.register.DuplicateAccount";
+            return "error.register.duplicate";
         }
 
         if (!isValidUsernameFormat(accountDTO.getUsername())) {
             logger.error("欲建立的帳號{}不符合建立原則",accountDTO.getUsername());
-            return "error.register.AccountCase";
+            return "error.register.account.case";
         }
 
         if (!isValidPasswordFormat(accountDTO.getPassword())) {
             logger.error("欲建立的密碼{}不符合建立原則",accountDTO.getPassword());
-            return "error.register.PasswordCase";
+            return "error.register.password.case";
         }
         logger.info("驗證帳號密碼:成功");
         return  null;
