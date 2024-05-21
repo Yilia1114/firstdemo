@@ -7,7 +7,6 @@ import com.example.firstdemo.util.JwtUtils;
 import com.example.firstdemo.dao.Account;
 import com.example.firstdemo.controller.pojo.AccountDTO;
 import com.example.firstdemo.dao.jpa.AccountRepository;
-import com.example.firstdemo.service.helper.AccountValidationHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
@@ -29,27 +28,22 @@ public class AccountService {
 
     private final MessageSource messageSource;
 
+    private  final  AccountValidationService accountValidationService;
+
 
     //註冊帳號
     public ResponseEntity<SuccessResponse> createAccount(AccountDTO accountDTO,Locale locale) {
 
-        //驗證帳號密碼
-        String code =  AccountValidationHelper.validateAccount(accountDTO, accountRepository);
-        if(code != null){
-            String errorMessage = messageSource.getMessage(code, null, locale);
-            throw new BusinessException(errorMessage);
-        }
+        //帳號密碼驗證
+        accountValidationService.validateAccount(accountDTO,locale);
 
-        //成功直接註冊
+        //開始註冊
         Account newAccount = new Account();
-        newAccount.setId(accountRepository.count() + 1);
         newAccount.setUsername(accountDTO.getUsername());
         newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
         accountRepository.save(newAccount);
-        String successMessage = messageSource.getMessage("success.registration", null, locale);
-        return ResponseEntity.ok(SuccessResponse.successMessage(successMessage));
+        return ResponseEntity.ok(SuccessResponse.successMessage(messageSource.getMessage("success.registration", null, locale)));
     }
-
 
 
     //修改帳號密碼
@@ -57,12 +51,8 @@ public class AccountService {
         Account existingAccount = accountRepository.findById(id).orElse(null);
 
         if (existingAccount != null) {
-            //驗證要修改的帳號密碼
-            String code = AccountValidationHelper.validateAccount(accountDTO, accountRepository);
-            if(code != null){
-                String errorMessage = messageSource.getMessage(code, null, locale);
-                throw new BusinessException(errorMessage);
-            }
+            //帳號密碼驗證
+            accountValidationService.validateAccount(accountDTO,locale);
 
             // 更新帳戶資訊
             existingAccount.setUsername(accountDTO.getUsername());
