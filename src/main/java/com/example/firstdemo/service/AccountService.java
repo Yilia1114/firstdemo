@@ -10,6 +10,7 @@ import com.example.firstdemo.dao.jpa.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -32,43 +33,43 @@ public class AccountService {
 
 
     //註冊帳號
-    public ResponseEntity<SuccessResponse> createAccount(AccountDTO accountDTO,Locale locale) {
-
+    public ResponseEntity<SuccessResponse> createAccount(AccountDTO accountDTO) {
+        Locale locale=LocaleContextHolder.getLocale();
         //帳號密碼驗證
-        accountValidationService.validateAccount(accountDTO,locale);
+        accountValidationService.validateAccount(accountDTO, locale);
 
         //開始註冊
         Account newAccount = new Account();
         newAccount.setUsername(accountDTO.getUsername());
         newAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
         accountRepository.save(newAccount);
-        return ResponseEntity.ok(SuccessResponse.successMessage(messageSource.getMessage("success.registration", null, locale)));
+        return ResponseEntity.ok(SuccessResponse.successMessage(messageSource.getMessage("success.registration", null,locale)));
     }
 
 
     //修改帳號密碼
-    public ResponseEntity<SuccessResponse> updateAccount(Long id, AccountDTO accountDTO,Locale locale) {
+    public ResponseEntity<SuccessResponse> updateAccount(Long id, AccountDTO accountDTO) {
         Account existingAccount = accountRepository.findById(id).orElse(null);
 
         if (existingAccount != null) {
             //帳號密碼驗證
-            accountValidationService.validateAccount(accountDTO,locale);
+            accountValidationService.validateAccount(accountDTO,LocaleContextHolder.getLocale());
 
             // 更新帳戶資訊
             existingAccount.setUsername(accountDTO.getUsername());
             existingAccount.setPassword(bCryptPasswordEncoder.encode(accountDTO.getPassword()));
             accountRepository.save(existingAccount);
-            String successMessage = messageSource.getMessage("success.update", null, locale);
+            String successMessage = messageSource.getMessage("success.update", null, LocaleContextHolder.getLocale());
             return ResponseEntity.ok(SuccessResponse.successMessage(successMessage));
         } else {
-            String errorMessage = messageSource.getMessage("error.update", null, locale);
+            String errorMessage = messageSource.getMessage("error.update", null, LocaleContextHolder.getLocale());
             throw new BusinessException(errorMessage);
         }
     }
 
 
     // 登入
-    public ResponseEntity<SuccessResponse> login(AccountDTO accountDTO,Locale locale) {
+    public ResponseEntity<SuccessResponse> login(AccountDTO accountDTO) {
 
         // 1. 從資料庫中根據用戶名查詢帳戶資訊，包括加密後的密碼。
         Account account = accountMapper.findByUsername(accountDTO.getUsername());
@@ -82,7 +83,7 @@ public class AccountService {
 
         } else {
             // 密碼不匹配，登入失敗
-            String errorMessage = messageSource.getMessage("error.login", null, locale);
+            String errorMessage = messageSource.getMessage("error.login", null, LocaleContextHolder.getLocale());
             throw new BusinessException(errorMessage);
         }
 

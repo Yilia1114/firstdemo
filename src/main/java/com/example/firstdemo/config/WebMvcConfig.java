@@ -5,7 +5,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
 @Configuration
-public class WebMvcConfiguration implements WebMvcConfigurer{
+public class WebMvcConfig implements WebMvcConfigurer{
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")             // 允许跨域请求的path，支持路径通配符，如：/api/**
@@ -17,5 +17,4 @@ public class WebMvcConfiguration implements WebMvcConfigurer{
                 .maxAge(3600)                           // 预检缓存一个小时
         ;
     }
-
 }
