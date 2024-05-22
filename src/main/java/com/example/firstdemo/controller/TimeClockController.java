@@ -22,7 +22,7 @@ public class TimeClockController {
     }
     //補卡
     @PutMapping ("/time_clocks/{id}")
-    public ResponseEntity<SuccessResponse> updateTimeClock(@PathVariable Long id,@AuthenticationPrincipal String username,@) {
+    public ResponseEntity<SuccessResponse> updateTimeClock(@PathVariable Long id,@AuthenticationPrincipal String username) {
         log.info("執行: 會員補卡 [帳號:'{}']", username);
         return timeClockService.updateTimeClock(id,username);
     }
