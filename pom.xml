@@ -114,6 +114,12 @@
 				<my.profile>test</my.profile>
 			</properties>
 		</profile>
+		<profile>
+			<id>env</id>
+			<properties>
+				<my.profile>env</my.profile>
+			</properties>
+		</profile>
 	</profiles>
 
 </project>

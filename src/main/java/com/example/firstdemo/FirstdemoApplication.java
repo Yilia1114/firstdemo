@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@MapperScan("com.example.firstdemo.dao.MyBatis") // 指定Mapper接口所在的包
+@MapperScan("com.example.firstdemo.dao.mybatis") // 指定Mapper接口所在的包
 @EnableScheduling
 @Slf4j
 public class FirstdemoApplication {
