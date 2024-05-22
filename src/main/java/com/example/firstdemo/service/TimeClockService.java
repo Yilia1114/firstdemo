@@ -41,7 +41,7 @@ public class TimeClockService {
         }
     }
     @Transactional
-    public ResponseEntity<SuccessResponse> updateTimeClock(Long id ,String username) {
+    public ResponseEntity<SuccessResponse> updateTimeClock(Long id,String username) {
         //確認是否為會員
         log.debug("確認是否為會員: {}", username);
         Account account = accountRepository.findByUsername(username);

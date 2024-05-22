@@ -16,7 +16,7 @@ import java.util.concurrent.CompletableFuture;
 public class UserClockTimeSchedule {
 
     private final TimeClockRepository timeClockRepository;
-    private final UserClockTimeTask userClockTimeTasks;
+    private final UserClockTimeTask userClockTimeTask;
     private static final Logger logger = LoggerFactory.getLogger(UserClockTimeSchedule.class);
 
     @Scheduled(fixedRate = 360000) //用於測試
@@ -24,7 +24,7 @@ public class UserClockTimeSchedule {
     public void calculateUserClockTime() {
         List<String> users = timeClockRepository.findDistinctUsernames();
         List<CompletableFuture<Void>> futures = users.stream()
-                .map(userClockTimeTasks::processUserClockTime)
+                .map(userClockTimeTask::processUserClockTime)
                 .toList();
         CompletableFuture<Void> allFutures = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
         allFutures.thenRun(() -> logger.info("所有會員打卡時間已計算完成"));

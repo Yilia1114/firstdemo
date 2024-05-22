@@ -22,5 +22,4 @@ public class TimeClockStatistics {
     private Timestamp tcStatisticsUpdateTime;
     @Column (name = "user_time_lag")
     private Long userTimeLag;
-
 }
